@@ -13,5 +13,5 @@ Package.describe({
 Package.onUse(function(api) {
   api.use(['underscore', 'check', 'coffeescript@1.0.5','random@1.0.2','matb33:collection-hooks@0.7.6','momentjs:moment@2.9.0']);
   api.versionsFrom('1.0.4');
-  api.addFiles(['collectionRevisions.coffee','restoreRevision.coffee']);
+  api.addFiles(['collectionRevisions.js','restoreRevision.coffee']);
 });
