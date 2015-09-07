@@ -47,6 +47,9 @@ Mongo.Collection.prototype.attachCollectionRevisions = function(opts) {
   collection.before.update(function(userId, doc, fieldNames, modifier, options) {
     crDebug(opts, 'Begin before.update');
     crDebug(opts, opts, 'Defined options');
+    var _user = Meteor.user();
+    crDebug(_user._id, 'User ID is here now');
+    
     options = options || {};
     if (options.multi) {
       crDebug(opts, "multi doc update attempted, can't create revisions this way, leaving.");
